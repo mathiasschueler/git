@@ -1,0 +1,205 @@
+/* Globales Layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f8ff;
+    color: #003366;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #0057a0;
+    margin-bottom: 10px;
+}
+
+header img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hauptcontainer */
+#mainWindow {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 87, 160, 0.2);
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+/* Formular - Inputs nebeneinander */
+form#createCar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #0057a0;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #a3c9f7;
+    background-color: #f9fbff;
+    font-size: 1rem;
+}
+
+#createBtn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    margin-top: 24px;
+    background-color: #0057a0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#createBtn:hover {
+    background-color: #004080;
+}
+
+
+
+
+#carDetails div {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Steuerung */
+#steuerung {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+#motorSteuerung,
+#gpsSteuerung {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9fbff;
+    border: 1px solid #b4d8ff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+#steuerung button {
+    background-color: #0073cf;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#steuerung button:hover {
+    background-color: #005fa3;
+}
+
+#gpsSteuerung input[name="ziel"] {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #a3c9f7;
+    font-size: 1rem;
+}
+
+/* System-Log */
+#systemLog {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4fa;
+    border-left: 6px solid #0057a0;
+    border-radius: 10px;
+}
+
+#systemLog h2 {
+    color: #0057a0;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form#createCar {
+        flex-direction: column;
+    }
+
+    #steuerung {
+        flex-direction: column;
+    }
+}
+
+#carDetails {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #eaf4ff;
+    border-radius: 12px;
+    border: 1px solid #b4d8ff;
+
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* verhindert Umbruch */
+    justify-content: space-between;
+    /* Abstand gleichmäßig verteilen */
+}
+
+.carStatus {
+    flex: 1 1 0;
+    /* flexible Breite, gleich verteilt */
+    min-width: 0;
+    /* wichtig für flexbox bei overflow */
+    background-color: #f9fbff;
+    padding: 15px;
+    border: 1px solid #a3c9f7;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #003366;
+    box-shadow: 0 0 8px rgba(0, 87, 160, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

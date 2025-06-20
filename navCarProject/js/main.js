@@ -21,7 +21,8 @@ document
   });
 
 document.querySelector("#motorStarten").addEventListener("click", function () {
+  const logField = document.querySelector("#log");
   const newLog = document.createElement("div");
   newLog.textContent = car.startCar();
-  document.querySelector("#log").appendChild(newLog);
+  logField.insertBefore(newLog, logField.firstChild);
 });

@@ -1,8 +1,9 @@
 import { NavigationCar } from "./navCar.js";
 let car;
 
-
-document.querySelector("#createCar").addEventListener("submit", function (event) {
+document
+  .querySelector("#createCar")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
 
     const form = event.target;
@@ -12,21 +13,15 @@ document.querySelector("#createCar").addEventListener("submit", function (event)
     const fuelType = form.elements["fuel"].value;
     car = new NavigationCar(marke, model, ps, fuelType);
 
-
     const status = car.getCarStatus();
     document.querySelector("#fahrzeugBasicInfo").textContent = status.basicInfo;
     document.querySelector("#engineInfo").textContent = status.engineInfo;
     document.querySelector("#gpsInfo").textContent = status.gpsInfo;
     document.querySelector("#carDetails").style.display = "flex";
-
-
-});
+  });
 
 document.querySelector("#motorStarten").addEventListener("click", function () {
-    document.querySelector("#log").textContent = car.startCar();
-
-})
-
-
-
-
+  const newLog = document.createElement("div");
+  newLog.textContent = car.startCar();
+  document.querySelector("#log").appendChild(newLog);
+});

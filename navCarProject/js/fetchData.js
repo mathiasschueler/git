@@ -2,7 +2,7 @@
 
 export async function loadCars() {
   try {
-    const response = await fetch('../data/data.json');
+    const response = await fetch('./data/data.json');
     const cars = await response.json();
 
     const garage = document.getElementById('garage');

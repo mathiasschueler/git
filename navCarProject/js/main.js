@@ -1,5 +1,7 @@
 import { NavigationCar } from "./navCar.js";
+import { loadCars } from "./fetchData.js";
 let car;
+loadCars();
 
 document
   .querySelector("#createCar")
@@ -24,5 +26,5 @@ document.querySelector("#motorStarten").addEventListener("click", function () {
   const logField = document.querySelector("#log");
   const newLog = document.createElement("div");
   newLog.textContent = car.startCar();
-  logField.insertBefore(newLog, logField.firstChild);
+  logField.insertBefore(newLog, logField.firstChild); 
 });

@@ -1,0 +1,62 @@
+[
+  {
+    "Marke": "BMW",
+    "Modell": "3er",
+    "Leistung": 184,
+    "Kraftstofftyp": "Benzin"
+  },
+  {
+    "Marke": "Audi",
+    "Modell": "A4",
+    "Leistung": 150,
+    "Kraftstofftyp": "Diesel"
+  },
+  {
+    "Marke": "Mercedes-Benz",
+    "Modell": "C-Klasse",
+    "Leistung": 204,
+    "Kraftstofftyp": "Benzin"
+  },
+  {
+    "Marke": "Volkswagen",
+    "Modell": "Golf",
+    "Leistung": 110,
+    "Kraftstofftyp": "Benzin"
+  },
+  {
+    "Marke": "Porsche",
+    "Modell": "911 Carrera",
+    "Leistung": 385,
+    "Kraftstofftyp": "Benzin"
+  },
+  {
+    "Marke": "Opel",
+    "Modell": "Insignia",
+    "Leistung": 174,
+    "Kraftstofftyp": "Diesel"
+  },
+  {
+    "Marke": "BMW",
+    "Modell": "X5",
+    "Leistung": 286,
+    "Kraftstofftyp": "Diesel"
+  },
+  {
+    "Marke": "Audi",
+    "Modell": "Q5",
+    "Leistung": 265,
+    "Kraftstofftyp": "Benzin"
+  },
+  {
+    "Marke": "Mercedes-Benz",
+    "Modell": "GLC",
+    "Leistung": 197,
+    "Kraftstofftyp": "Diesel"
+  },
+  {
+    "Marke": "Volkswagen",
+    "Modell": "Passat",
+    "Leistung": 150,
+    "Kraftstofftyp": "Diesel"
+  }
+]

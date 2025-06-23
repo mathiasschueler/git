@@ -231,22 +231,3 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-.signal-light {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 8px;
-  vertical-align: middle;
-  flex-shrink: 0;
-}
-
-
-.signal-green {
-  background-color: green;
-}
-
-.signal-red {
-  background-color: red;
-}

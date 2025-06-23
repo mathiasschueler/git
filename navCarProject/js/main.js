@@ -20,23 +20,10 @@ function updateCarStatusDisplay() {
   document.querySelector("#gpsInfo").textContent = status.gpsInfo;
 
   const engineInfo = document.querySelector("#engineInfo");
-  engineInfo.innerHTML = ""; // alles löschen, um neu zu befüllen
 
-  // Signalleuchte erstellen oder aktualisieren
-  const signal = document.createElement("span");
-  signal.classList.add("signal-light");
-
-  // ✅ Immer eine Farbe setzen – auch wenn Motor nie gestartet wurde
-  if (car.engine.isOn) {
-    signal.classList.add("signal-green");
-  } else {
-    signal.classList.add("signal-red");
-  }
-
-  const textNode = document.createTextNode(status.engineInfo);
-
-  engineInfo.appendChild(signal);
-  engineInfo.appendChild(textNode);
+  // Emoji je nach Motorstatus
+  const emoji = car.engine.isOn ? "🟢" : "🔴";
+  engineInfo.textContent = `${emoji} ${status.engineInfo}`;
 }
 
 document

@@ -1,82 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Car</title>
     <script src="js/main.js" type="module" defer></script>
-    <link rel="icon" href="img/car.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="icon" href="img/car.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Navigation Car</h1>
-        <img src="img/carImage.png" width="300">
+      <h1>Navigation Car</h1>
+      <img src="img/carImage.png" width="300" alt="Auto Bild" />
     </header>
+
     <main>
-        <div id="mainWindow">
-            <form id="createCar">
-                <div class="input-group">
-                    <label for="marke">Marke:</label>
-                    <input type="text" name="marke" required>
-                </div>
-                <div class="input-group">
-                    <label for="model">Modell:</label>
-                    <input type="text" name="model" required>
-                </div>
-                <div class="input-group">
-                    <label for="ps">Leistung(PS):</label>
-                    <input type="number" name="ps" required>
-                </div>
-                <div class="input-group">
-                    <label for="fuel">Kraftstofftyp:</label>
-                    <select name="fuel">
-                        <option value="Benzin">Benzin</option>
-                        <option value="Diesel">Diesel</option>
-                        <option value="Elektrizität">Elektrizität</option>
-                        <option value="Erdgas">Erdgas</option>
-                    </select>
-                </div>
-                <button id="createBtn" type="submit">Auto erstellen</button>
-            </form>
-            <div id="carDetails">
-                <div class="carStatus" id="fahrzeugStatisch">🚗 Aktuelles Fahrzeug:</div>
-                <div class="carStatus" id="fahrzeugBasicInfo"></div>
-                <div class="carStatus" id="engineInfo"></div>
-                <div class="carStatus" id="gpsInfo"></div>
-            </div>
-            <div id="steuerung">
-                <div id="motorSteuerung">
-                    <button id="motorStarten">Motor starten</button>
-                    <button id="motorStoppen">Motor stoppen</button>
-                    <br><button id="motorDetails">Motor-Details</button>
-                </div>
-                <div id="gpsSteuerung">
-                    <label for="ziel">Ziel eingeben:</label>
-                    <input type="text" name="ziel" placeholder="z.B. New York City">
-                    <br> <button id="zielSetzen">Ziel setzen</button>
-                    <br> <button id="navigationStarten">Navigation starten</button>
-                    <button id="navigationStoppen">Navigation stoppen</button>
-                    <br> <button id="routeAnzeigen">Route anzeigen</button>
+      <div id="mainWindow">
+        <form id="createCar" autocomplete="off">
+          <!-- GARAGE DROPDOWN -->
+          <div class="input-group">
+            <label for="garage">Garage:</label>
+            <select name="garage" id="garage">
+              <option value="" disabled selected>Auswählen</option>
+            </select>
+          </div>
 
-                </div>
-            </div>
+          <!-- AUTO DETAILS -->
+          <div class="input-group">
+            <label for="marke">Marke:</label>
+            <input type="text" name="marke" id="marke" required readonly />
+          </div>
 
+          <div class="input-group">
+            <label for="model">Modell:</label>
+            <input type="text" name="model" id="model" required readonly />
+          </div>
 
+          <div class="input-group">
+            <label for="ps">Leistung (PS):</label>
+            <input type="number" name="ps" id="ps" required readonly />
+          </div>
+
+          <div class="input-group">
+            <label for="fuel">Kraftstofftyp:</label>
+            <select name="fuel" id="fuel" disabled>
+              <option value="Benzin">Benzin</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Elektrizität">Elektrizität</option>
+              <option value="Erdgas">Erdgas</option>
+            </select>
+          </div>
+
+          <button id="createBtn" type="submit">Auto erstellen</button>
+        </form>
+
+        <!-- AUTO STATUS -->
+        <div id="carDetails">
+          <div class="carStatus" id="fahrzeugStatisch">🚗 Aktuelles Fahrzeug:</div>
+          <div class="carStatus" id="fahrzeugBasicInfo"></div>
+          <div class="carStatus" id="engineInfo"></div>
+          <div class="carStatus" id="gpsInfo"></div>
         </div>
 
-        <div id="systemLog">
-            <h2>System-Log</h2>
-            <div id="log">
+        <!-- STEUERUNG -->
+        <div id="steuerung">
+          <div id="motorSteuerung">
+            <button id="motorStarten">Motor starten</button>
+            <button id="motorStoppen">Motor stoppen</button>
+            <button id="motorDetails">Motor-Details</button>
+          </div>
 
-            </div>
+          <div id="gpsSteuerung">
+            <label for="ziel">Ziel eingeben:</label>
+            <input type="text" id="ziel" name="ziel" placeholder="z.B. New York City" />
+            <br />
+            <button id="zielSetzen">Ziel setzen</button> <br />
+            <button id="navigationStarten">Navigation starten</button>
+            <button id="navigationStoppen">Navigation stoppen</button>
+            <br />
+            <button id="routeAnzeigen">Route anzeigen</button>
+          </div>
         </div>
+      </div>
+
+      <!-- SYSTEM LOG -->
+      <div id="systemLog">
+        <h2>System-Log</h2>
+        <div id="log"></div>
+      </div>
     </main>
-    <footer>
-        &copy 2025 Dominik Kraft, Artur Sabanadze, Mathias Schüler
-    </footer>
-</body>
 
+    <footer>&copy; 2025 Dominik Kraft, Artur Sabanadze, Mathias Schüler</footer>
+  </body>
 </html>

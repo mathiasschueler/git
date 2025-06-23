@@ -14,12 +14,14 @@ export class GPS {
     }
 
     startNavigation() {
-        if (this.isNavigating) {
-            return "Navigation läuft bereits";
-        } else {
-            this.isNavigating = true;
-            return "Navigation gestartet";
-        }
+        if (!this.destination) { return "Bitte setzen Sie ein Ziel" } else
+            if (this.isNavigating) {
+                return "Navigation läuft bereits";
+            } else {
+                this.isNavigating = true;
+                return "Navigation gestartet";
+            }
+
     }
 
     stopNavigation() {

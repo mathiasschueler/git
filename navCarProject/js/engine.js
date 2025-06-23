@@ -6,28 +6,26 @@ export class Engine {
   }
 
   start() {
-    const now = new Date().toLocaleString();
     if (!this.isOn) {
       this.isOn = true;
-      return `Motor gestartet: ${now}`;
+      return `Motor gestartet`;
     } else {
-      return `Motor läuft bereits: ${now}`;
+      return `Motor läuft bereits`;
     }
   }
 
   stop() {
     const now = new Date().toLocaleString();
     if (!this.isOn) {
-      return `Motor ist bereits aus: ${now}`;
+      return `Motor ist bereits aus`;
     } else {
       this.isOn = false;
-      return `Motor gestoppt: ${now}`;
+      return `Motor gestoppt`;
     }
   }
 
   getDetails() {
-    return `Der Motor hat: ${this.horsePower} PS und fährt mit ${this.fuelType}. Motorstatus: ${
-      this.isOn ? 'an' : 'aus'
-    }`;
+    return `Der Motor hat: ${this.horsePower} PS und fährt mit ${this.fuelType}. Motorstatus: ${this.isOn ? 'an' : 'aus'
+      }`;
   }
 }

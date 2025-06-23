@@ -17,6 +17,10 @@ export class NavigationCar {
         return this.engine.stop();
     }
 
+    getMotorDetails() {
+        return this.engine.getDetails();
+    }
+
     planRoute(destination) {
         if (this.gps.isNavigating) {
             return "Aktuelle Navigation muss abgebrochen werden, um eine neue Route zu planen.";
@@ -39,4 +43,19 @@ export class NavigationCar {
         };
     }
 
+    setNewDestination(destination) {
+        return this.gps.setDestination(destination);
+    }
+
+    startCarNavigation() {
+        return this.gps.startNavigation();
+    }
+
+    stopCarNavigation() {
+        return this.gps.stopNavigation();
+    }
+
+    getCurrentRoute() {
+        return this.gps.getCurrentRouteInfo();
+    }
 }
